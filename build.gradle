@@ -1,0 +1,28 @@
+//주석 처리
+    // 1. 외부 라이브러리 다운로드 받는 코드
+    //2. 그루비 언어[JSON과 유사하게 생김]
+
+plugins {
+    id 'org.springframework.boot' version '2.7.0' //스프링부트 라이브러리 이름
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE' //스프링 의존성 관리 라이브러리 이름
+    id 'java' //자바 라이브러리 이름
+}
+
+group = 'com.example' // 그룹명. 없어도됨
+version = '0.0.1-SNAPSHOT' //그룹 버전 없어도됨
+sourceCompatibility = '1.8' //자바 버전
+
+repositories {
+    mavenCentral()
+}
+
+dependencies { //의존성 [라이브러리 다운로드 받아오는 공간]
+    implementation 'org.springframework.boot:spring-boot-starter-web' //   starter-web 의존성
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'  //test 용임.
+    //여기에 의존성 추가 하는것. [새로운 라이브러리도 파일로 가져오는게 아니라 그냥 코드로 << 추가하는것.]
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // 타임리프 : 템플릿 엔진( 문서(View)에 데이터(Java)를 넣어주는 프로그램 )
+}
+
+tasks.named('test') { //스프링은 test 권장함.
+    useJUnitPlatform()
+}

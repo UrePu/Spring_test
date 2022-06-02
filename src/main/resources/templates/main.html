@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <div th:replace="header.html :: header"></div>
+<!--    해당파일의 프랙 불러오기-->
+<!--    th:replace = "파일명.html :: 프래그 이름-->
+    <h3>인텔리제이에서 작성한 HTML</h3>
+    <div>인텔리제이커뮤니티: html 제공</div>
+    <div> 인텔리제이커뮤니티: js,css 제공 x</div>
+    <div>자동완성을 제공하지 않는 언어들은 자동완성 프로그램 설치 = tablnine </div>
+    <div>html 에 html 포함</div>
+        <p>타임리프 이용한 다른 html 가져오기</p>
+<div>java에서 넘어온 데이터 호출</div>
+
+    <div> ajax를 이용한 java에서 통신한 데이터 호출</div>
+
+    <div id="divBox"></div>
+    <div th:text ="${data}"> </div>
+    <div th:replace="footer.html::footer"></div>
+</body>
+</html>
